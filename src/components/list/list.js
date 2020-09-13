@@ -1,13 +1,10 @@
 import React from "react";
 import "./list.css";
 
-const List = () => (
+const List = ({ lists }) => (
 	<div className="list-container">
-		<ul>
-			<li>do something</li>
-			<li>do something</li>
-			<li>do something</li>
-		</ul>
+		{lists.length > 0 &&
+			lists.map((list) => <div key={list.id}>{list.text}</div>)}
 	</div>
 );
 
